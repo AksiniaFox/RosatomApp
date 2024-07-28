@@ -1,7 +1,8 @@
 
 # Тестовое задание от РОСАТОМ по JavaScript
 #### Необходимо реализовать сайт-галерею, в которую администраторы сайта могут загружать фотографии, а посетители - просматривать их.
-> <a target="_blank" href="https://rosatom.adm.aksiniafox.ru/">Ссылка на демо-проект Админка Directus</a>
+> <a target="_blank" href="https://rosatom.adm.aksiniafox.ru/">Ссылка на демо-проект Админка Directus</a> 
+####
 > <a target="_blank" href="https://rosatom.aksiniafox.ru/">Ссылка на демо-проект Клиентская часть</a>
 
 ## Как запустить проект
