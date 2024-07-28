@@ -1,8 +1,9 @@
 import axios from 'axios'
+import config from "../config.js"
 
 const $api = axios.create({
     withCredentials: true,
-    baseURL: "http://localhost:8055"
+    baseURL: config.API_URL
 })
 
 export default $api

@@ -16,11 +16,13 @@ services:
       DB_FILENAME: "/directus/database/data.db"
       WEBSOCKETS_ENABLED: "true"
       CORS_ENABLED: "true"
+      CORS_ORIGIN: "true"
 
-  client:
-    image: client-rosatom
-    ports:
-      - 5173:5173
-    build: 
-      context: client-rosatom
-      dockerfile: Dockerfile
+
+    client:
+      image: client-rosatom
+      ports:
+        - 5173:5173
+      build: 
+        context: client-rosatom
+        dockerfile: Dockerfile

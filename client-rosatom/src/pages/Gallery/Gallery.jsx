@@ -1,10 +1,12 @@
 import React, { useEffect, useState } from 'react'
-import { observer } from 'mobx-react-lite'
+import config from "../../config.js"
 
-import './index.css'
-import Popup from "../../components/popup/popup.jsx"
+import { observer } from 'mobx-react-lite'
 import imageStore from "../../store/gallery-store.jsx"
 
+import './index.css'
+
+import Popup from "../../components/popup/popup.jsx"
 import Loader from '../../components/loader/loader.jsx'
 
 const Body = observer(() => {
@@ -24,7 +26,7 @@ const Body = observer(() => {
 
     const PageChange = (newPage) => {
         imageStore.setCurrentPage(newPage)
-      }
+    }
   
 
     return (
@@ -37,7 +39,7 @@ const Body = observer(() => {
                     {imageStore.currentImages.map((image, index) => (
                         <div className='block' key={index}>
                             <img 
-                            src={'http://localhost:8055/assets/'+image.id} 
+                            src={config.API_URL+'/assets/'+image.id+'?key=system-medium-cover'} 
                             className='icon' 
                             onClick={() => openModal((imageStore.currentPage - 1) * imageStore.imagesPage + index)} />
                         </div>
