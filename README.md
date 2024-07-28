@@ -1,7 +1,4 @@
 
-
-
-
 # Тестовое задание от РОСАТОМ по JavaScript
 #### Необходимо реализовать сайт-галерею, в которую администраторы сайта могут загружать фотографии, а посетители - просматривать их.
 > <a target="_blank" href="/">Ссылка на демо-проект</a>
@@ -17,11 +14,16 @@ gh repo clone AksiniaFox/RosatomApp
 docker compose up
 ```
 
-Админка Directus:
-    URL: localhost:8055 
-    Логин: admin@example.com
-    Пароль: d1r3ctu5
+### Админка Directus
+* URL: localhost:8055 
+* Логин: admin@example.com
+* Пароль: d1r3ctu5
+
+### Клиентская часть
+* URL: localhost:5173
 
 
-Клиентская часть: 
-    URL: localhost:5173
+
+![This is an image](/gitSource/HomePage.png)
+![This is an image](/gitSource/OpenImage.png)
+![This is an image](/gitSource/Directus.png)
