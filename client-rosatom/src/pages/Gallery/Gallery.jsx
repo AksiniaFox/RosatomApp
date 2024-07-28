@@ -8,6 +8,9 @@ import './index.css'
 
 import Popup from "../../components/popup/popup.jsx"
 import Loader from '../../components/loader/loader.jsx'
+import ErrorPage from '../../components/error/error.jsx'
+import NoPhotoPage from '../../components/noPhoto/noPohto.jsx'
+
 
 const Body = observer(() => {
 
@@ -34,7 +37,11 @@ const Body = observer(() => {
         <div>
             <h1 className='head'> Фото галерея </h1>
 
-            {imageStore.load? <Loader/> : 
+            {
+                imageStore.load? <Loader/> : 
+                imageStore.error ? <ErrorPage/> :
+                imageStore.currentImages.length == 0 ? <NoPhotoPage/> :
+
                 <div className='container_blocks'>
                     {imageStore.currentImages.map((image, index) => (
                         <div className='block' key={index}>
@@ -46,24 +53,28 @@ const Body = observer(() => {
                     ))}
                 </div>
             }
-                    
-            <div className='pagination'>
-                <button
-                    className="prev"
-                    onClick={() => PageChange(imageStore.currentPage - 1)}
-                    disabled={imageStore.currentPage === 1}
-                    >
-                    Предыдущая
-                </button>
-                <div>{`${imageStore.currentPage} / ${imageStore.totalPages}`}</div>
-                <button
-                    className="next"
-                    onClick={() => PageChange(imageStore.currentPage + 1)}
-                    disabled={imageStore.currentPage === imageStore.totalPages}
-                    >
-                    Следующая
-                </button>
-            </div>
+
+            {
+                imageStore.currentImages.length == 0 ? <></> :
+                <div className='pagination'>
+                    <button
+                        className="prev"
+                        onClick={() => PageChange(imageStore.currentPage - 1)}
+                        disabled={imageStore.currentPage === 1}
+                        >
+                        Предыдущая
+                    </button>
+                    <div>{`${imageStore.currentPage} / ${imageStore.totalPages}`}</div>
+                    <button
+                        className="next"
+                        onClick={() => PageChange(imageStore.currentPage + 1)}
+                        disabled={imageStore.currentPage === imageStore.totalPages}
+                        >
+                        Следующая
+                    </button>
+                </div>
+            }        
+            
 
             {imageStore.selectedImage && <Popup closeModal={closeModal} startIndex={imageStore.currentIndex} images = {imageStore.images}/>}
         

@@ -8,6 +8,7 @@ class ImageStore {
   currentIndex = null
   currentPage = 1
   imagesPage = 8
+  error = false
 
   constructor() {
     makeAutoObservable(this)
@@ -19,6 +20,10 @@ class ImageStore {
 
   setLoad(load) {
     this.load = load
+  }
+
+  setError(load) {
+    this.error = load
   }
 
   setSelectedImage(image, index) {
@@ -44,6 +49,7 @@ class ImageStore {
 
   async fetchImages() {
     this.setLoad(true)
+    this.setError(false)
     try {
       const res = await $api.get('/files')
       runInAction(() => {
@@ -55,6 +61,7 @@ class ImageStore {
       console.log('Произошла ошибка')
       runInAction(() => {
         this.setLoad(false)
+        this.setError(true)
       })
     }
   }
