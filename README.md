@@ -1,7 +1,8 @@
 
 # Тестовое задание от РОСАТОМ по JavaScript
 #### Необходимо реализовать сайт-галерею, в которую администраторы сайта могут загружать фотографии, а посетители - просматривать их.
-> <a target="_blank" href="/">Ссылка на демо-проект</a>
+> <a target="_blank" href="rosatom.adm.aksiniafox.ru">Ссылка на демо-проект Админка Directus</a>
+> <a target="_blank" href="rosatom.aksiniafox.ru">Ссылка на демо-проект Клиентская часть</a>
 
 ## Как запустить проект
 Клонировать репозиторий из GitHub:
@@ -42,3 +43,8 @@ docker compose up
 - ✅ Добавьте поддержку превьюшек
 - ✅ Настроить docker-compose  
 - ✅ Задеплоить проект на собственный VPS сервер 
+> <a target="_blank" href="rosatom.adm.aksiniafox.ru">Ссылка на демо-проект Админка Directus</a>
+> <a target="_blank" href="rosatom.aksiniafox.ru">Ссылка на демо-проект Клиентская часть</a>
+
+#### Проект реализован с использованием
+JavaScript Vite React MobX Axios HTML CSS Docker Directus Git
