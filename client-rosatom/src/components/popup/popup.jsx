@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import './index.css';
+import config from "../../config.js"
 
 const Popup = ({closeModal, startIndex,images }) => {
   const [index, setIndex] = useState(startIndex)
@@ -21,7 +22,7 @@ const Popup = ({closeModal, startIndex,images }) => {
     <div className="modal" onClick={closeModal}>
       <span className="close">&times;</span>
       <button className="prev" onClick={prevSlide}>❮</button>
-      <img className="modal-content" src={'http://localhost:8055/assets/'+images[index].id}/>
+      <img className="modal-content" src={config.API_URL+'/assets/'+images[index].id}/>
       <button className="next" onClick={nextSlide}>❯</button>
     </div>
   )
