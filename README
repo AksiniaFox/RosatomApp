@@ -1,4 +1,17 @@
 
 // тестовое описание
 
-Для запуска склонируй себе проект и запусти его через докер docker compose up
+
+Команды для запуска проекта:
+    gh repo clone AksiniaFox/RosatomApp
+    docker compose up
+
+
+Админка Directus:
+    URL: localhost:8055 
+    Логин: admin@example.com
+    Пароль: d1r3ctu5
+
+
+Клиентская часть: 
+    URL: localhost:5173
