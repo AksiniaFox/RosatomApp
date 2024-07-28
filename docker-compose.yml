@@ -23,8 +23,3 @@ services:
     build: 
       context: .client-rosatom
       dockerfile: Dockerfile
-   
-
-      
-
-      
