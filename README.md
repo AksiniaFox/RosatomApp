@@ -8,7 +8,7 @@
 ## Как запустить проект
 Клонировать репозиторий из GitHub:
 ```bash
-gh repo clone AksiniaFox/RosatomApp
+git clone https://github.com/AksiniaFox/RosatomApp.git
 ```
 
 Запустить Docker compose:
